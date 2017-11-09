@@ -1,0 +1,20 @@
+group 'btrepro'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'distribution'
+
+mainClassName = 'Repro'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    compile group: 'com.google.cloud.bigtable', name: 'bigtable-client-core', version: '1.0.0-pre4'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
